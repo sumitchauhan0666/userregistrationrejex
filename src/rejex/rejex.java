@@ -5,10 +5,10 @@ import java.util.regex.Pattern;
 
 public class rejex  {
 
-    static Pattern pattern = Pattern.compile("^(?=[^A-Z]*[A-Z][^A-Z]*$)(?=.*\\d).{8}$");
+    static Pattern pattern = Pattern.compile("^(?=[^A-Z]*[A-Z][^A-Z]*$)(?=.*\\W+)(?=.*\\d).{8}$");
         public static void main(String[] args) {
 // 1abb23a
-        String password = "amAfi1ku";
+        String password = "amAf@1@u";
         Matcher passwordmatcher = pattern.matcher(password);
         if(passwordmatcher.matches()==true ){
             System.out.println("Matches");
